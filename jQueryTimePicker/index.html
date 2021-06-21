@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>jQuery Timepicker Plugin Example</title>
+    <meta name="description" content="DESCRIPTIONHERE" />
+    <meta name="author" content="Frontendscript" />
+   
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    	<link rel="stylesheet" href="dist/wickedpicker.min.css">
+</head>
+<body>
+		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+             
+        </div>
+        <div class="col-rt-2">
+            <ul>
+                <li><a href="https://frontendscript.com/jquery-timepicker-24-hour-format">Back to the Tutorial</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>jQuery TimePicker 24 Hour Format</h1>
+                <p>A simple and highly configureable Plugin</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+                <div class="content__subsection" id="demo">
+                  <div class="content__subsection picker-container">
+                    <h4>Twelve hour clock:</h4>
+                    <input type="text" id="timepicker-12-hr" name="timepicker-12-hr" class="timepicker-12-hr">
+                  </div>
+
+                  <div class="content__subsection picker-container">
+                    <h4>Twenty-four hour clock:</h4>
+                    <input type="text" id="timepicker-24-hr" name="timepicker-24-hr" class="timepicker-24-hr">
+                  </div>
+
+                  <div class="content__subsection picker-container">
+                    <h4>Twelve hour clock and clearable:</h4>
+                    <input type="text" id="timepicker-12-hr-clearable" name="timepicker-12-hr-clearable" class="timepicker-12-hr-clearable">
+                  </div>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+    		</div>
+		</div>
+    </div>
+</section>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<!-- Timepicker Js -->
+<script src="dist/wickedpicker.min.js"></script>
+
+<script>
+  var twelveHour = $('.timepicker-12-hr').wickedpicker();
+  $('.time').text('//JS Console: ' + twelveHour.wickedpicker('time'));
+  $('.timepicker-24-hr').wickedpicker({twentyFour: true});
+  $('.timepicker-12-hr-clearable').wickedpicker({clearable: true});
+</script>
+
+     
+  
+    
+	</body>
+</html>
