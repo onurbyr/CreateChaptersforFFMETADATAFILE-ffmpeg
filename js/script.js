@@ -1,3 +1,27 @@
+//Choosefile
+function readSingleFile(e) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var contents = e.target.result;
+      displayContents(contents);
+    };
+    reader.readAsText(file);
+  }
+  
+  function displayContents(contents) {
+    var element = document.getElementById('extmeta');
+    element.textContent = contents;
+  }
+  
+  document.getElementById('file-input')
+    .addEventListener('change', readSingleFile, false);
+
+
+//timepicker
 var options = {
     twentyFour: true,
     showSeconds: true,
@@ -5,7 +29,7 @@ var options = {
 
 $('.timepicker').wickedpicker(options);
 
-
+//createmetadatafile
 convertButton.addEventListener("click", function() {
     var lines = $('#time').val().split('\n');
 
@@ -49,6 +73,9 @@ convertButton.addEventListener("click", function() {
         end.push(videolengthstamp)
 
         var text=""
+        var extractedmeta= document.getElementById('extmeta').value;
+        text+=extractedmeta;
+        text+="\n\n";
         for(var i = 0;i < lines.length;i++)
         {
             text+=`[CHAPTER]\nTIMEBASE=1/1000\nSTART=${start[i]}\nEND=${end[i]}\ntitle=${title[i]}\n\n`
@@ -56,9 +83,6 @@ convertButton.addEventListener("click", function() {
 
         var blob = new Blob([text], {type: "text/text;charset=utf-8"});
         saveAs(blob, "FFMETADATAFILE");
-
-
-
     }
 })
 

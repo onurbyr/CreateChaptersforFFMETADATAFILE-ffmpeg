@@ -17,10 +17,23 @@
             <label for="exampleFormControlTextarea1">Video Length: </label>
             <input type="text" name="timepicker" class="timepicker" id="timepicker" />
         </div>
-            
+
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Times</label>
-            <textarea class="form-control" id="time" rows="20" ></textarea>
+            <label >Choose existing metadatafile:</label>
+            <input class="form-control" type="file" id="file-input"/>
+          </div>
+
+          <div class="form-group col">
+            <label for="exampleFormControlTextarea1">Extracted Metadata</label>
+            <textarea class="form-control" id="extmeta" rows="8" disabled ></textarea>
+            <b>Example Chapters Format:</b><br>
+            <textarea class="form-control" rows="7" placeholder="0:00:00 Chapter1&#10;0:05:27 Chapter2&#10;0:10:06 Chapter3" disabled></textarea>
+          </div>
+
+
+        <div class="form-group col">
+            <label for="exampleFormControlTextarea1">Chapters</label>
+            <textarea class="form-control" id="time" rows="17" ></textarea>
           </div>
 
         <button id="convertButton" class="btn btn-primary mt-3">Save</button>
